@@ -1,12 +1,22 @@
 package Packages;
+import java.util.*;
 
-import java.util.Set;
-import java.util.HashSet;
 
 /**
 * @generated
 */
 public class ResearchJournal {
+	
+	public ResearchJournal() {}
+	
+	public ResearchJournal(String journalName) {
+		this.journalName = journalName;
+	}
+	
+	public ResearchJournal(String journalName, String journalSection) {
+		this.journalName = journalName;
+		this.journalSection = journalSection;
+	}
     
     /**
     * @generated
@@ -21,11 +31,6 @@ public class ResearchJournal {
     /**
     * @generated
     */
-    private invalid editors;
-    
-    /**
-    * @generated
-    */
     private String journalSection;
     
     /**
@@ -36,33 +41,23 @@ public class ResearchJournal {
     /**
     * @generated
     */
-    private Vector<User> subscribers;
-    
-    /**
-    * @generated
-    */
-    private Double journalRate;
-    
-    /**
-    * @generated
-    */
-    private invalid attribute;
-    
-    /**
-    * @generated
-    */
-    private Double journalRateSum;
-    
-    /**
-    * @generated
-    */
-    private Integer journalRateCounter;
+    private Set<User> subscribers;
     
     
     /**
     * @generated
     */
-    private Set<ResearchPaper> researchPaper;
+    private Vector<ResearchPaper> researchPapers;
+    
+    /**
+    * @generated
+    */
+    private Double journalRateSum = 0.0;
+    
+    /**
+    * @generated
+    */
+    private Integer journalRateCounter = 0;
     
     
     /**
@@ -75,7 +70,7 @@ public class ResearchJournal {
     /**
     * @generated
     */
-    public String setJournalName(String journalName) {
+    public void setJournalName(String journalName) {
         this.journalName = journalName;
     }
     
@@ -89,21 +84,7 @@ public class ResearchJournal {
     /**
     * @generated
     */
-    public Vector<Researcher> setEditors(Vector<Researcher> editors) {
-        this.editors = editors;
-    }
-    
-    /**
-    * @generated
-    */
-    public invalid getEditors() {
-        return this.editors;
-    }
-    
-    /**
-    * @generated
-    */
-    public invalid setEditors(invalid editors) {
+    public void setEditors(Vector<Researcher> editors) {
         this.editors = editors;
     }
     
@@ -117,8 +98,15 @@ public class ResearchJournal {
     /**
     * @generated
     */
-    public String setJournalSection(String journalSection) {
+    public void setJournalSection(String journalSection) {
         this.journalSection = journalSection;
+    }
+    
+    /**
+    * @generated
+    */
+    public Double getJournalRate() {
+        return journalRateSum / journalRateCounter;
     }
     
     /**
@@ -131,78 +119,22 @@ public class ResearchJournal {
     /**
     * @generated
     */
-    public Vector<ResearchPaper> setPublishedPapers(Vector<ResearchPaper> publishedPapers) {
+    public void setPublishedPapers(Vector<ResearchPaper> publishedPapers) {
         this.publishedPapers = publishedPapers;
     }
     
     /**
     * @generated
     */
-    public Vector<User> getSubscribers() {
+    public Set<User> getSubscribers() {
         return this.subscribers;
     }
     
     /**
     * @generated
     */
-    public Vector<User> setSubscribers(Vector<User> subscribers) {
+    public void setSubscribers(Set<User> subscribers) {
         this.subscribers = subscribers;
-    }
-    
-    /**
-    * @generated
-    */
-    public Double getJournalRate() {
-        return this.journalRate;
-    }
-    
-    /**
-    * @generated
-    */
-    public Double setJournalRate(Double journalRate) {
-        this.journalRate = journalRate;
-    }
-    
-    /**
-    * @generated
-    */
-    public invalid getAttribute() {
-        return this.attribute;
-    }
-    
-    /**
-    * @generated
-    */
-    public invalid setAttribute(invalid attribute) {
-        this.attribute = attribute;
-    }
-    
-    /**
-    * @generated
-    */
-    public Double getJournalRateSum() {
-        return this.journalRateSum;
-    }
-    
-    /**
-    * @generated
-    */
-    public Double setJournalRateSum(Double journalRateSum) {
-        this.journalRateSum = journalRateSum;
-    }
-    
-    /**
-    * @generated
-    */
-    public Integer getJournalRateCounter() {
-        return this.journalRateCounter;
-    }
-    
-    /**
-    * @generated
-    */
-    public Integer setJournalRateCounter(Integer journalRateCounter) {
-        this.journalRateCounter = journalRateCounter;
     }
     
 
@@ -211,41 +143,30 @@ public class ResearchJournal {
     /**
     * @generated
     */
-    public boolean submitPaper() {
-        //TODO
-        return false;
+    public void submitPaper(ResearchPaper paper) {
+        this.researchPapers.add(paper);
     }
     
     /**
     * @generated
     */
-    public boolean rateJournal1to10() {
-        //TODO
-        return false;
+    public void rateJournal1to10(Integer rate) {
+        this.journalRateCounter++;
+        this.journalRateSum += rate;
     }
     
     /**
     * @generated
     */
-    public boolean subscribe() {
-        //TODO
-        return false;
+    public void subscribe(User user) {
+        this.subscribers.add(user);
     }
     
     /**
     * @generated
     */
-    public boolean unsubscribe() {
-        //TODO
-        return false;
-    }
-    
-    /**
-    * @generated
-    */
-    public boolean donate() {
-        //TODO
-        return false;
+    public void unsubscribe(User user) {
+        this.subscribers.remove(user);
     }
     
     
