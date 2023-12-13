@@ -1,0 +1,249 @@
+package Research;
+import java.util.*;
+
+/**
+* @generated
+*/
+public class Researcher {
+    
+    /**
+    * @generated
+    */
+    private String name;
+    
+    /**
+    * @generated
+    */
+    private String surname;
+    
+    /**
+    * @generated
+    */
+    private String id;
+    
+    /**
+    * @generated
+    */
+    private String researchArea;
+    
+    /**
+    * @generated
+    */
+    private Integer citations;
+    
+    /**
+    * @generated
+    */
+    private Integer yearsOfExperience;
+    
+    /**
+    * @generated
+    */
+    private Set<Researcher> collaborators;
+    
+    /**
+    * @generated
+    */
+    private Set<ResearchProject> projects;
+   
+    /**
+    * @generated
+    */
+    private Vector<ResearchPaper> papers;
+    
+    /**
+    * @generated
+    */
+    private Vector<ResearchProject> currentProjects;
+
+    /**
+    * @generated
+    */
+    private Vector<String> feedback;
+    
+    
+    /**
+    * @generated
+    */
+    public String getName() {
+        return this.name;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    /**
+    * @generated
+    */
+    public String getSurname() {
+        return this.surname;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+    
+    /**
+    * @generated
+    */
+    public String getId() {
+        return this.id;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    /**
+    * @generated
+    */
+    public String getResearchArea() {
+        return this.researchArea;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setResearchArea(String researchArea) {
+        this.researchArea = researchArea;
+    }
+    
+    /**
+    * @generated
+    */
+    public Integer getCitations() {
+        return this.citations;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setCitations(Integer citations) {
+        this.citations = citations;
+    }
+    
+    /**
+    * @generated
+    */
+    public Integer getYearsOfExperience() {
+        return this.yearsOfExperience;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setYearsOfExperience(Integer yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+    
+    /**
+    * @generated
+    */
+    public Set<Researcher> getCollaborators() {
+        return this.collaborators;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setCollaborators(Set<Researcher> collaborators) {
+        this.collaborators = collaborators;
+    }
+    
+    /**
+    * @generated
+    */
+    public Set<ResearchProject> getProjects() {
+        return this.projects;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setProjects(Set<ResearchProject> projects) {
+        this.projects = projects;
+    }
+
+    /**
+    * @generated
+    */
+    public Vector<ResearchPaper> getPapers() {
+        return this.papers;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setPapers(Vector<ResearchPaper> papers) {
+        this.papers = papers;
+    }
+    
+    /**
+    * @generated
+    */
+    public Vector<ResearchProject> getCurrentProjects() {
+        return this.currentProjects;
+    }
+    
+    /**
+    * @generated
+    */
+    public void setCurrentProjects(Vector<ResearchProject> currentProjects) {
+        this.currentProjects = currentProjects;
+    }
+    
+    /**
+    * @generated
+    */
+    public Vector<String> getFeedback() {
+        return this.feedback;
+    }
+    
+
+    //                          Operations                                  
+    
+    /**
+    * @generated
+    */
+    public boolean submitPaper(ResearchPaper paper) {
+        //TODO
+        return false;
+    }
+    
+    /**
+    * @generated
+    */
+    public int calculateHIndex() {
+        //TODO
+        return 0;
+    }
+    
+    /**
+    * @generated
+    */
+    public boolean proposeResearchProject() {
+        //TODO
+        return false;
+    }
+    
+    /**
+    * @generated
+    */
+    public boolean printPapers(Comparator)() {
+        //TODO
+        return false;
+    }
+    
+    
+}
+
